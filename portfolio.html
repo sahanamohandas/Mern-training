@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Portfolio</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background: #333;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 20px auto;
+      padding: 10px;
+    }
+
+    .box {
+      background: white;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .projects {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .project {
+      flex: 1 1 calc(33.333% - 20px);
+      background: #e9f0ff;
+      padding: 15px;
+      border-radius: 6px;
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .project h3 {
+      margin-top: 0;
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      background: #333;
+      color: white;
+    }
+
+    @media (max-width: 768px) {
+      .project {
+        flex: 1 1 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>My Portfolio</h1>
+    <p>Welcome to my personal website</p>
+  </header>
+
+  <div class="container">
+
+    <div class="box">
+      <h2>About Me</h2>
+      <p>Hello! I'm a web developer with a passion for clean design and interactive web experiences. I build websites using HTML, CSS, JavaScript, and more.</p>
+    </div>
+
+    <div class="box">
+      <h2>Projects</h2>
+      <div class="projects">
+        <div class="project">
+          <h3>Project 1</h3>
+          <p>Simple website built with HTML & CSS.</p>
+        </div>
+        <div class="project">
+          <h3>Project 2</h3>
+          <p>JavaScript game – a fun little browser game.</p>
+        </div>
+        <div class="project">
+          <h3>Project 3</h3>
+          <p>React app that helps organize daily tasks.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="box">
+      <h2>Contact</h2>
+      <p>Email: sahanamohandas005@example.com</p>
+      <p>LinkedIn: sahanamohandas005.com</p>
+    </div>
+
+  </div>
+
+  <footer>
+    &copy; 2025 Your Name. All rights reserved.
+  </footer>
+
+</body>
+</html>

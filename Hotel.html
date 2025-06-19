@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Delish Dine | Restaurant</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: url('https://images.unsplash.com/photo-1600891964599-f61ba0e24092?auto=format&fit=crop&w=1600&q=80') no-repeat center center fixed;
+      background-size: cover;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background: rgba(0, 0, 0, 0.6);
+      color: white;
+      height: 300px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.6);
+    }
+
+    header h1 {
+      font-size: 48px;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 20px;
+    }
+
+    nav {
+      background-color: rgba(230, 126, 34, 0.95);
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: white;
+      padding: 14px 20px;
+      text-decoration: none;
+      transition: 0.3s;
+      cursor: pointer;
+    }
+
+    nav a:hover {
+      background-color: #d35400;
+    }
+
+    .page {
+      display: none;
+      padding: 60px 20px;
+      max-width: 900px;
+      margin: auto;
+      min-height: 70vh;
+      animation: fadeIn 0.4s ease;
+      text-align: center;
+      background-color: rgba(255, 255, 255, 0.95);
+      border-radius: 10px;
+      margin-top: 40px;
+    }
+
+    .active {
+      display: block;
+    }
+
+    img {
+      width: 90%;
+      max-width: 500px;
+      border-radius: 12px;
+      margin: 20px 0;
+    }
+
+    .menu-item {
+      background: #fff;
+      margin: 25px auto;
+      padding: 20px;
+      max-width: 600px;
+      border-left: 6px solid #e67e22;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      text-align: left;
+    }
+
+    footer {
+      background-color: rgba(211, 84, 0, 0.95);
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Delish Dine</h1>
+    <p>Fresh. Local. Delicious.</p>
+  </header>
+
+  <nav>
+    <a onclick="showPage('home')">Home</a>
+    <a onclick="showPage('about')">About</a>
+    <a onclick="showPage('menu')">Menu</a>
+    <a onclick="showPage('contact')">Contact</a>
+  </nav>
+
+  <!-- Pages -->
+  <section id="home" class="page active">
+    <h2>Welcome to Delish Dine</h2>
+    <p>Welcome to the heart of authentic taste! At Delish Dine, we serve flavors that speak the language of tradition and innovation. Enjoy an unforgettable dining experience with cozy ambiance and mouthwatering dishes crafted with passion.</p>
+    <img src="https://source.unsplash.com/featured/?restaurant" alt="Restaurant view">
+  </section>
+
+  <section id="about" class="page">
+    <h2>About Us</h2>
+    <p>Founded in 2020, Delish Dine is more than just a restaurant—it's a culinary destination. With a team of expert chefs and a commitment to sustainability, we bring you dishes made from locally-sourced ingredients, cooked to perfection.</p>
+    <p>Our mission is simple: deliver happiness on every plate. Whether it's a casual family dinner or a romantic evening, we create the perfect setting for all your moments.</p>
+    <img src="https://source.unsplash.com/featured/?chef,kitchen" alt="Chef in kitchen">
+  </section>
+
+  <section id="menu" class="page">
+    <h2>Our Menu</h2>
+    <div class="menu-item">
+      <h3>🍕 Veg Pizza – ₹180</h3>
+      <p>Loaded with gooey mozzarella, crunchy capsicum, olives, and our signature tomato basil sauce.</p>
+      <img src="https://source.unsplash.com/featured/?pizza" alt="Veg Pizza">
+    </div>
+    <div class="menu-item">
+      <h3>🌯 Paneer Wrap – ₹150</h3>
+      <p>Grilled paneer cubes tossed in spicy masala, wrapped in a warm soft tortilla, served with mint chutney.</p>
+      <img src="https://source.unsplash.com/featured/?wrap,indianfood" alt="Paneer Wrap">
+    </div>
+    <div class="menu-item">
+      <h3>🥗 Garden Fresh Salad – ₹120</h3>
+      <p>A crunchy mix of seasonal vegetables, herbs, and lemon vinaigrette for a refreshing bite.</p>
+      <img src="https://source.unsplash.com/featured/?salad" alt="Fresh Salad">
+    </div>
+  </section>
+
+  <section id="contact" class="page">
+    <h2>Contact Us</h2>
+    <p>📍 Address: 123 Food Street, Anna Nagar, Chennai</p>
+    <p>📞 Phone: +91 98765 43210</p>
+    <p>📧 Email: hello@delishdine.com</p>
+    <p>⏰ Timings: Mon–Sun | 11:00 AM – 10:30 PM</p>
+    <img src="https://source.unsplash.com/featured/?map,location" alt="Location Map">
+  </section>
+
+  <footer>
+    <p>© 2025 Delish Dine | Designed with ❤</p>
+  </footer>
+
+  <script>
+    function showPage(pageId) {
+      const pages = document.querySelectorAll('.page');
+      pages.forEach(page => {
+        page.classList.remove('active');
+      });
+      document.getElementById(pageId).classList.add('active');
+    }
+  </script>
+
+</body>
+</html>

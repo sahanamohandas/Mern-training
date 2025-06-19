@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Flexbox with Background Colors</title>
+  <style>
+    .flex-container {
+      display: flex;                   /* Enables Flexbox */
+      justify-content: space-around;  /* Even spacing between items */
+      align-items: center;            /* Vertically centers items */
+      height: 200px;
+      background-color: #ddd;         /* Background color of the container */
+      padding: 20px;
+    }
+
+    .box {
+      width: 100px;
+      height: 100px;
+      color: white;
+      display: flex;                  /* Center text inside box */
+      justify-content: center;
+      align-items: center;
+      font-weight: bold;
+    }
+
+    .box1 {
+      background-color: #ff5733; /* Red-orange */
+    }
+
+    .box2 {
+      background-color: #33c1ff; /* Light blue */
+    }
+
+    .box3 {
+      background-color: #75ff33; /* Green */
+      color: #000;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="flex-container">
+    <div class="box box1">Box 1</div>
+    <div class="box box2">Box 2</div>
+    <div class="box box3">Box 3</div>
+  </div>
+
+</body>
+</html>
